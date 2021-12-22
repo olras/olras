@@ -1,0 +1,9 @@
+name: olras
+channels:
+  - conda-forge
+dependencies:
+  - python>=3.6
+  - pip
+  - pre-commit
+  - pip:
+    - -r olras/requirements.txt
