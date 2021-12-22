@@ -4,6 +4,6 @@ channels:
 dependencies:
   - python>=3.6
   - pip
-  - pre-commit
+  - pre-commit>=2.16.0
   - pip:
     - -r olras/requirements.txt
