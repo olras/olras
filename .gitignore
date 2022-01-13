@@ -1,6 +1,9 @@
 # Jupyter-book builds
 _build/
 
+# Betterbib stuff
+*sqlite
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
