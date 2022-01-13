@@ -4,7 +4,7 @@
 # re-generate this one.
 ###############################################################################
 author = 'OLRAS Authors'
-bibtex_bibfiles = ['references.bib']
+bibtex_bibfiles = ['bibliography/references.bib']
 comments_config = {'hypothesis': False, 'utterances': False}
 copyright = '2021'
 exclude_patterns = ['**.ipynb_checkpoints', '.DS_Store', 'Thumbs.db', '_build']
