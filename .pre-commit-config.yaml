@@ -4,3 +4,7 @@ repos:
   hooks:
   - id: jb-to-sphinx
     args: ["olras"]
+- repo: https://github.com/nschloe/betterbib
+  rev: v4.2.0
+  hooks:
+  - id: betterbib-format
