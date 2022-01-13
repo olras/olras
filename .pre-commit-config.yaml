@@ -4,7 +4,11 @@ repos:
   hooks:
   - id: jb-to-sphinx
     args: ["olras"]
-- repo: https://github.com/nschloe/betterbib
-  rev: v4.2.0
+- repo: local
   hooks:
-  - id: betterbib-format
+  - id: betterbib-update
+    name: Update bib-files
+    description: Format bib-files in a consistent manner
+    entry: betterbib update --in-place -u
+    language: python
+    files: '^.*\.bib$'
