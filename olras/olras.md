@@ -19,3 +19,6 @@ Everyone welcome to contribute, while a few of us (Anton Akhmerov, Valla Fatemi,
 Questions and proposed contributions may be posed via our [forum], where all discussions and reviews occur.
 Please see [here] for details on the submission of new contributions. 
 Finally, we ask that you follow our [conduct rules]. 
+
+```{bibliography}
+```
