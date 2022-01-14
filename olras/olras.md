@@ -2,7 +2,7 @@
 
 ## Why Andreev states 
 
-Andreev states were first described about 50 years ago {cite}`andreev1964thermal`, kicking off the idea mesoscopic superconductivity.
+Andreev states were first described about 50 years ago {cite}`andreev1965electron`, kicking off the idea mesoscopic superconductivity.
 The last decade has seen a dramatic expansion in the experimental realizations and theoretical descriptions of Andreev states. 
 These include systems that could host fundamentally new quasiparticles (the non-abelian Majorana zero modes) and even be used as devices in quantum information systems (i.e., Andreev qubits). 
 Suffice it to say here that this is a subject of great interest.
