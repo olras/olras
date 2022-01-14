@@ -3,7 +3,10 @@
 
 format: jb-book
 root: olras
-# parts:
-#   - caption: Prologue
-#     chapters:
-#     - file: contributing
+parts:
+  # - caption: Prologue
+  #   chapters:
+  #   - file: contributing
+  - caption: Overview
+    chapter:
+    - file: topic_map
