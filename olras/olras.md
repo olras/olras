@@ -16,7 +16,7 @@ In particular, this review will aim to update our understanding of past work bas
 
 ## Project state
 
-This concept is a work in progress, so please bear with us.
+We are setting up the project and its infrasturure, bear with us until we add content.
 
 ## Contributing
 
