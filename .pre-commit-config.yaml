@@ -5,6 +5,7 @@ repos:
   - id: jb-to-sphinx
     args: ["olras"]
 - repo: https://github.com/nschloe/betterbib
+  rev: v4.2.0
   hooks:
   - id: betterbib-update
     name: Update bib-files
