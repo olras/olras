@@ -8,5 +8,5 @@ parts:
   #   chapters:
   #   - file: contributing
   - caption: Overview
-    chapter:
+    chapters:
     - file: topic_map
