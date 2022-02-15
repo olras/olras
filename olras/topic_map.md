@@ -1,5 +1,10 @@
 # Minimal models
-We begin our discussion by analyzing three simple limiting models that illustrate interesting properties of ABS.
+<!-- Andreev states have rich physics that can be understood from different perspectives -->
+Andreev states are coherent superpositions of electrons and holes that exist in a non-superconducting region, and are coupled by reflecting from a nearby superconductor.
+If the same normal region is coupled to more than one superconductor, the energies of the Andreev states start depending on the superconducting phase difference through the *energy-phase relation*, and therefore they carry supercurrent.
+The interplay between the physics of the normal region and the superconductor makes Andreev states manifest in very different regimes and alters their properties.
+Depending on the situation one considers, a different perspective on the Andreev states captures the essential physics most naturally.
+To illustrate this variation, we begin with three toy models of Andreev states, each capturing a different way of viewing them.
 
 ## Weakly coupled quantum dot
 We consider a small metallic region with a single fermionic level with a hamiltonian coupled to two superconducting reservoirs with complex order paramters $\Delta_{1,2}$.
