@@ -1,12 +1,17 @@
 # Minimal models
 <!-- Andreev states have rich physics that can be understood from different perspectives -->
-Andreev states are coherent superpositions of electrons and holes that exist in a non-superconducting region, and are coupled by reflecting from a nearby superconductor.
+Andreev states are coherent superpositions of electrons and holes that exist in a non-superconducting region or a weak link between two superconductors, and are coupled by reflecting from a nearby superconductor.
 If the same normal region is coupled to more than one superconductor, the energies of the Andreev states start depending on the superconducting phase difference through the *energy-phase relation*, and therefore they carry supercurrent.
 The interplay between the physics of the normal region and the superconductor makes Andreev states manifest in very different regimes and alters their properties.
 Depending on the situation one considers, a different perspective on the Andreev states captures the essential physics most naturally.
 To illustrate this variation, we begin with three toy models of Andreev states, each capturing a different way of viewing them.
 
-## Weakly coupled quantum dot
+## Tunneling perspective
+<!-- When the normal region has few levels and weak tunneling, a Hamiltonian description is natural. -->
+The go-to approach to combining different ingredients in quantum mechanics is perturbation theory.
+The simplest normal region is a quantum dot containing a single electron level.
+Weakly coupling the quantum dot to the superconductors imbues a part of the superconducting properties on the dot level, introducing a *proximity-induced superconducting pairing*.
+
 We consider a small metallic region with a single fermionic level with a hamiltonian coupled to two superconducting reservoirs with complex order paramters $\Delta_{1,2}$.
 The bare hamiltonian of the dot reads
 
@@ -72,6 +77,17 @@ $$
 \frac{dE}{d\varphi} = \frac{2|\Delta|^2}{\mu}\sin(\varphi).
 $$
 
+## Point scatterer perspective
+<!-- When most of the wave function is in the superconductor, the scattering state basis is the most appropriate. -->
+The weak link between two superconductors can be arbitrarily small.
+In the extreme limit of the *Dayem bridge* there is no normal region at all, only a constriction between two superconductors.
+The natural starting point for describing this *short junction* regime is the scattering approach, which analyzes how electron waves entering a superconductor reflect from it, and from the junction.
+
+## Large normal region perspective
+<!-- When quasiparticles spend most of the time in the normal region, the superconductors become hard wall boundaries. -->
+In the opposite limit, the normal region is sufficiently large for the quasiparticles to spend most of the time outside of the superconductor.
+In other words, in the *long junction* limit, the quasiparticle dwell time $\tau_\text{dw} = v_F / L $ (with $v_F$ the Fermi velocity, $L$ the size of the normal region, and $\hbar$ the reduced Plank constant) becomes much larger than the Andreev reflection time $\hbar/\Delta$, as follows from the uncertainty relation.
+The quasiparticle wave function then are linear superpositions of travelling waves, matched at the interfaces with the superconductor by the effective boundary conditions.
 
 # Sub-fields of Andreev states
 
