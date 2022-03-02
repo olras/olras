@@ -82,12 +82,72 @@ $$
 The weak link between two superconductors can be arbitrarily small.
 In the extreme limit of the *Dayem bridge* there is no normal region at all, only a constriction between two superconductors.
 The natural starting point for describing this *short junction* regime is the scattering approach, which analyzes how electron waves entering a superconductor reflect from it, and from the junction.
+We consider two superconducting contacts with phase difference $\varphi$ connected by a normal region with a point scatterer.
+Scattering states at energy $\varepsilon$ in the left and normal regions are superpositions of incoming and outgoing states:
+
+$$
+\Psi_L = \sum_{c=e, h} a_{c, L} |c_{L, \mathrm{in}}\rangle + b_{c, L} |c_{L, \mathrm{out}}\rangle \\
+\Psi_R = \sum_{c=e, h} a_{c, R} |c_{L, \mathrm{in}}\rangle + b_{c, R} |c_{R, \mathrm{out}}\rangle
+$$
+
+Incoming waves that interact with the point scatterer are normal-reflected according to the scattering matrix $S_N$:
+
+$$
+\begin{pmatrix} b_{e, R} \\ b_{e, L} \\ b_{h, R} \\ b_{h, L} \end{pmatrix} = S_N \begin{pmatrix} a_{e, R} \\ a_{e, L} \\ a_{h, R} \\ a_{h, L} \end{pmatrix}
+$$(normal_reflection)
+
+Because the normal region does not mix electrons and holes, $S_N$ is block-diagonal in electron-hole space:
+
+$$
+S_N = \begin{pmatrix}s_N & 0 \\ 0 & s_N\end{pmatrix}, \\\\
+s_N = \begin{pmatrix} r & t \\ t & r \end{pmatrix}.
+$$
+
+Here we have used the short-junction approximation to neglect the energy dependence of $s_N$.
+At energies below the bulk superconducting gap ($\varepsilon < \Delta$), there are no propagating states in the superconductors.
+Therefore, outgoing particles that come into contact with a superconducting terminal will be Andreev reflected:
+
+$$
+\begin{pmatrix} a_{e, R} \\ a_{e, L} \\ a_{h, R} \\ a_{h, L} \end{pmatrix} = S_A(\varepsilon) \begin{pmatrix} b_{e, R} \\ b_{e, L} \\ b_{h, R} \\ b_{h, L} \end{pmatrix}
+$$(andreev_reflection)
+
+where
+
+$$
+S_A = \begin{pmatrix}0 & s_A(\varepsilon) \\ s_A(\varepsilon)^* & 0 \end{pmatrix}, \\\\
+s_A = e^{-i \arccos \varepsilon / \Delta} \begin{pmatrix} e^{i\varphi/2} & 0 \\ 0 & e^{-i\varphi/2} \end{pmatrix}
+$$
+
+has a block off-diagonal structure because the superconductors mix electron and hole degrees of freedom.
+
+Plugging {eq}`normal_reflection` into {eq}`andreev_reflection` we obtain
+
+$$
+(\mathbb{I} - S_A(\varepsilon) S_N) \begin{pmatrix} a_{e, R} \\ a_{e, L} \\ a_{h, R} \\ a_{h, L} \end{pmatrix} = 0
+$$(andreev_system)
+
+Equation {eq}`andreev_system` implies that $\det(\mathbb{I} - s_A(\varepsilon) s_N(\varepsilon)) = 0$.
+Solving this equation yields the short junction spectrum:
+
+$$
+E = \Delta \sqrt{1 - t \sin^2 \frac{\varphi}{2}}
+$$(short_junction)
 
 ## Large normal region perspective
 <!-- When quasiparticles spend most of the time in the normal region, the superconductors become hard wall boundaries. -->
 In the opposite limit, the normal region is sufficiently large for the quasiparticles to spend most of the time outside of the superconductor.
 In other words, in the *long junction* limit, the quasiparticle dwell time $\tau_\text{dw} = v_F / L $ (with $v_F$ the Fermi velocity, $L$ the size of the normal region, and $\hbar$ the reduced Plank constant) becomes much larger than the Andreev reflection time $\hbar/\Delta$, as follows from the uncertainty relation.
 The quasiparticle wave function then are linear superpositions of travelling waves, matched at the interfaces with the superconductor by the effective boundary conditions.
+To derive the spectrum of a long junction, we consider the phase acquired by an electron propagating in the weak link.
+
+```{note}
+:class: dropdown
+By neglecting the dynamical phase $2kL$ we recover the short-junction spectrum {eq}`short_junction`.
+```
+
+
+## Comparison of models
+
 
 # Sub-fields of Andreev states
 
