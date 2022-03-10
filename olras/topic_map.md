@@ -116,7 +116,7 @@ where
 $$
 S_A = \begin{pmatrix}0 & s_A(\varepsilon) \\ s_A(\varepsilon)^* & 0 \end{pmatrix}, \\\\
 s_A = e^{-i \arccos \varepsilon / \Delta} \begin{pmatrix} e^{i\varphi/2} & 0 \\ 0 & e^{-i\varphi/2} \end{pmatrix}
-$$
+$$(sc_scattering_mat)
 
 has a block off-diagonal structure because the superconductors mix electron and hole degrees of freedom.
 
@@ -137,13 +137,35 @@ $$(short_junction)
 <!-- When quasiparticles spend most of the time in the normal region, the superconductors become hard wall boundaries. -->
 In the opposite limit, the normal region is sufficiently large for the quasiparticles to spend most of the time outside of the superconductor.
 In other words, in the *long junction* limit, the quasiparticle dwell time $\tau_\text{dw} = v_F / L $ (with $v_F$ the Fermi velocity, $L$ the size of the normal region, and $\hbar$ the reduced Plank constant) becomes much larger than the Andreev reflection time $\hbar/\Delta$, as follows from the uncertainty relation.
-The quasiparticle wave function then are linear superpositions of travelling waves, matched at the interfaces with the superconductor by the effective boundary conditions.
-To derive the spectrum of a long junction, we consider the phase acquired by an electron propagating in the weak link.
+The quasiparticle wave functions then are linear superpositions of travelling waves, matched at the interfaces with the superconductor by the effective boundary conditions.
+
+To derive the spectrum of a long junction we use a semiclassical approach.
+In particular, we apply the [Bohr-Sommerfeld](https://en.wikipedia.org/wiki/Old_quantum_theory#Basic_principles) condition, which states that bound states arise when there are closed trajectories in which quasiparticles acquire a total phase of $2 \pi n$, with $n$ integer.
+We consider right-moving electron in the weak link.
+As it moves through the weak link, it acquires a dynamical phase $kL$.
+When it reaches the right superconductor, it Andreev reflects to a hole and acquires a phase $-\frac{\varphi}{2} - \arccos(E/\Delta)$ (see equation {eq}`sc_scattering_mat`).
+The hole then travels to the left terminal, acquiring a dynamical phase of $-k_h L$ and Andreev reflects with the same phase as the right-moving electron.
+Collecting these terms, the quantization condition becomes
+
+$$
+2\pi n = -\varphi - 2\arccos(E/\Delta) + (k_e - k_h) L
+$$(quantization_condition)
 
 ```{note}
 :class: dropdown
-By neglecting the dynamical phase $2kL$ we recover the short-junction spectrum {eq}`short_junction`.
+By neglecting the dynamical phase $(k_e - k_h) L$ we recover the short-junction spectrum {eq}`short_junction` with $t=0$.
 ```
+
+Equation {eq}`quantization_condition` does not have a general closed-form solutions.
+However, we can can obtain approximate solutions by making some simplifying, but reasonable assumption.
+First, we assume $k \ll k_F$ and linearize the kinetic energy: $k_e = \sqrt{k_F^2 + \frac{2mE}{k_F \hbar^2}} \approx k_F  + \frac{E}{\hbar v_F}$, where $v_F$ is the Fermi velocity (an analogous calculation for the hole branch yields find $k_h \approx k_F  - \frac{mE}{\hbar v_F}$).
+Because we're interested in low-lying states we may also expand $\arccos (E / \Delta) \approx \pi/2 - E / \Delta$
+Plugging these approximations in {eq}`quantization_condition` we obtain
+
+$$
+E = \frac{\hbar}{2}\frac{1}{\tau_\text{AR} + \tau_\text{dw}} (2\pi (n + \frac{1}{2}) + \varphi)
+$$
+
 
 
 ## Comparison of models
