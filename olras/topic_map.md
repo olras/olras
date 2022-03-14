@@ -170,7 +170,37 @@ $$
 This corresponds to the expected supercurrent mediated by Andreev reflections occuring at every $\tau_\text{AR}$.
 
 ## Comparison of models
+We summarize the features of each model in Table {numref}`model-table`.
 
+```{list-table} Comparison of models
+:header-rows: 1
+:name: model-table
+
+* - Model
+  - Basis
+  - Physical limit
+  - Supercurrent scale
+  - Relevant parameters
+  - Can describe
+* - Dot
+  - Localized dot wavefunctions
+  -
+  -
+  -
+  - Finite charging energy
+* - Short junction
+  - Scattering states in the superconducting leads
+  -
+  -
+  -
+  -
+* - Long junction
+  -
+  -
+  -
+  -
+  -
+```
 
 # Sub-fields of Andreev states
 
