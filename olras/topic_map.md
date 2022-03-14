@@ -8,26 +8,21 @@ To illustrate this variation, we begin with three toy models of Andreev states, 
 
 ## Tunneling perspective
 <!-- When the normal region has few levels and weak tunneling, a Hamiltonian description is natural. -->
-The go-to approach to combining different ingredients in quantum mechanics is perturbation theory.
-The simplest normal region is a quantum dot containing a single electron level.
-Weakly coupling the quantum dot to the superconductors imbues a part of the superconducting properties on the dot level, introducing a *proximity-induced superconducting pairing*.
-
-We consider a small metallic region with a single fermionic level with a hamiltonian coupled to two superconducting reservoirs with complex order paramters $\Delta_{1,2}$.
-The bare hamiltonian of the dot reads
+The simplest normal region is a quantum dot containing a single electron level with a bare hamiltonian
 
 $$
 H_\mathrm{dot} = -\mu (c_\downarrow^\dagger c_\downarrow + c_\uparrow^\dagger c_\uparrow)
 $$
 
 where $\mu$ is the chemical potential of the dot.
-The proximity with the superconducting reservoirs induces superconducting correlations in dot.
+Weakly coupling the quantum dot to the superconductors imbues a part of the superconducting properties on the dot level, introducing a *proximity-induced superconducting pairing*.
 Within the mean-field approximation, we can model this effect with the term
 
 $$
 H_\mathrm{SC} = (\Delta_1^* + \Delta_2^*) c_\uparrow c_\downarrow  + (\Delta_1 + \Delta_2)  c_\downarrow^\dagger c_\uparrow^\dagger
 $$
 
-with $\Delta_{1, 2}$ the superconducting pairing of the two superconductors.
+with $\Delta_{1, 2}$ the induced superconducting pairing of each superconductor.
 Using the Bogoliubov De Gennes formalism, we can bring the Hamiltonian to a quadratic form
 
 $$
@@ -54,13 +49,13 @@ d_2 &\approx  c_\downarrow^\dagger - \left(\frac{|\Delta_1 + \Delta_2 |^2}{2\mu}
 \end{aligned}
 $$
 
-We can construct the ground state wavefunction $|\Psi\rangle$ by taking the vacuum state $|0\rangle$ and removing all quasiparticles:
+We can construct the ground state wavefunction $|\Psi\rangle$ by taking the vacuum state $|0\rangle$ and projecting out all components with quasiparticles:
 
 $$
 |\Psi \rangle \propto d_1 d_2 |0\rangle \propto -\left(\frac{|\Delta_1 + \Delta_2 |^2}{2\mu}\right)|0\rangle + |\uparrow \downarrow \rangle
 $$
 
-The wavefunction shows [one](one) of the most striking properties of ABS: **they are localized states in metallic regions *without* charge quantization.**
+The wavefunction shows [one](one) of the most striking properties of ABS: *they are localized states in metallic regions *without* charge quantization.*
 
 We now study what happens when there is a finite phase difference $\varphi$ between the superconductors.
 For simplicity we consider $|\Delta_1| = |\Delta_2| = |\Delta|$.
@@ -71,10 +66,10 @@ E = -2 \mu - \frac{2|\Delta|^2}{\mu}(1 + \cos(\varphi)).
 $$
 
 Here we observe another striking property of ABS.
-**Because the ground state energy disperses with $\varphi$, the ABS mediate supercurrent between the superconductors** with magnitude
+*Because the ground state energy disperses with $\varphi$, the ABS mediate supercurrent between the superconductors* with magnitude
 
 $$
-\frac{dE}{d\varphi} = \frac{2|\Delta|^2}{\mu}\sin(\varphi).
+I = \frac{2e}{\hbar} \frac{dE}{d\varphi} = \frac{4e |\Delta|^2}{\hbar\mu}\sin(\varphi).
 $$
 
 ## Point scatterer perspective
@@ -127,7 +122,7 @@ $$
 $$(andreev_system)
 
 Equation {eq}`andreev_system` implies that $\det(\mathbb{I} - s_A(\varepsilon) s_N(\varepsilon)) = 0$.
-Solving this equation yields the short junction spectrum:
+Solving this equation yields the short junction spectrum {cite}`beenakker1991universal`:
 
 $$
 E = \Delta \sqrt{1 - t \sin^2 \frac{\varphi}{2}}
@@ -143,7 +138,7 @@ To derive the spectrum of a long junction we use a semiclassical approach.
 In particular, we apply the [Bohr-Sommerfeld](https://en.wikipedia.org/wiki/Old_quantum_theory#Basic_principles) condition, which states that bound states arise when there are closed trajectories in which quasiparticles acquire a total phase of $2 \pi n$, with $n$ integer.
 We consider right-moving electron in the weak link.
 As it moves through the weak link, it acquires a dynamical phase $kL$.
-When it reaches the right superconductor, it Andreev reflects to a hole and acquires a phase $-\frac{\varphi}{2} - \arccos(E/\Delta)$ (see equation {eq}`sc_scattering_mat`).
+When it reaches the right superconductor, it Andreev reflects as a hole and acquires a phase $-\frac{\varphi}{2} - \arccos(E/\Delta)$ (see equation {eq}`sc_scattering_mat`).
 The hole then travels to the left terminal, acquiring a dynamical phase of $-k_h L$ and Andreev reflects with the same phase as the right-moving electron.
 Collecting these terms, the quantization condition becomes
 
@@ -157,16 +152,22 @@ By neglecting the dynamical phase $(k_e - k_h) L$ we recover the short-junction 
 ```
 
 Equation {eq}`quantization_condition` does not have a general closed-form solutions.
-However, we can can obtain approximate solutions by making some simplifying, but reasonable assumption.
-First, we assume $k \ll k_F$ and linearize the kinetic energy: $k_e = \sqrt{k_F^2 + \frac{2mE}{k_F \hbar^2}} \approx k_F  + \frac{E}{\hbar v_F}$, where $v_F$ is the Fermi velocity (an analogous calculation for the hole branch yields find $k_h \approx k_F  - \frac{mE}{\hbar v_F}$).
-Because we're interested in low-lying states we may also expand $\arccos (E / \Delta) \approx \pi/2 - E / \Delta$
-Plugging these approximations in {eq}`quantization_condition` we obtain
+However, we can can obtain approximate solutions by making some simplifying, but reasonable assumptions.
+First, we assume large carrier density $k_{e/h} \ll k_F$ (*Andreev approximation*) and linearize $k_e = \sqrt{k_F^2 + \frac{2mE}{k_F \hbar^2}} \approx k_F  + \frac{E}{\hbar v_F}$, where $v_F$ is the Fermi velocity. An analogous calculation for the hole branch yields find $k_h \approx k_F  - \frac{E}{\hbar v_F}$.
+Because we're interested in low-lying states we may also expand $\arccos (E / \Delta) \approx \pi/2 - E / \Delta$.
+Plugging these approximate expressions in {eq}`quantization_condition` we obtain levels that disperse linearly with the phase:
 
 $$
-E = \frac{\hbar}{2}\frac{1}{\tau_\text{AR} + \tau_\text{dw}} (2\pi (n + \frac{1}{2}) + \varphi)
+E = \frac{\hbar}{2}\frac{1}{\tau_\text{AR} + \tau_\text{dw}} (2\pi (n + \frac{1}{2}) + \varphi).
 $$
 
+Analogously to the square-well potential, the level spacing decreases with the length of junction. Calculating the full Josephson current of this model is out of scope for this section, as it requires carrying out complicated sums over all levels and including continuum contributions {cite}`kulik1969macroscopic, ishii1970josephson`. Nevertheless, it is instructive to compute the current carried by a single level in the limit of $\tau_\text{AR} \gg \tau_\text{dw}$
 
+$$
+I = \frac{2e}{\hbar} \frac{\partial E}{\partial \varphi} \approx \frac{2e}{2\tau_\text{AR}} = \frac{2e}{2 v_F / L}
+$$
+
+This corresponds to the expected supercurrent mediated by Andreev reflections occuring at every $\tau_\text{AR}$.
 
 ## Comparison of models
 
@@ -184,3 +185,7 @@ $$
 ## Majorana zero modes
 
 ## Andreev bound states as topological matter
+
+```{bibliography}
+:filter: docname in docnames
+```
