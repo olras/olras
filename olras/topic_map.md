@@ -212,10 +212,8 @@ We summarize the features of each model in Table {numref}`model-table`.
 
 ## Multiterminal devices
 Attaching three or more superconducting contacts to a weak link enables physical phenomena with no analogues in two-terminal devices.
-
 One example is *multiplet supercurrent*, where multiterminal Andreev states mediate dissipationless charge transfers across superconducting electrodes at finite voltage.
-The simplest implementation of this is a three-terminal device where two terminals biased at $n_1 V_1 = n_2 V_2$ each transfer $n_1$ and $n_2$ Cooper pairs to a third ground terminal.
-
+The simplest implementation of this is a three-terminal device where two terminals biased at $n_1 V_1 = n_2 V_2$ each transfer $n_1$ and $n_2$ Cooper pairs to a third grounded terminal.
 Another popular avenue of research focuses on realizing effective topological matter in multiterminal junctions.
 By carefully engineering the weak link, the resulting Andreev bands (where the superconducting phase differences playing the role of crystal momenta) become topologically nontrivial.
 In particular, multiterminal junctions can host topologically protected Weyl points that manifest as quantized transconductance.
