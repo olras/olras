@@ -170,7 +170,7 @@ $$
 This corresponds to the expected supercurrent mediated by Andreev reflections occuring at every $\tau_\text{AR}$.
 
 ## Comparison of models
-We summarize the features of each model in Table {numref}`model-table`.
+We summarize the features of each model in {numref}`model-table`.
 
 ```{list-table} Comparison of models
 :header-rows: 1
