@@ -225,7 +225,7 @@ Specifically, in *Andreev level qubits* the computational basis corresponds to t
 Information is therefore encoded in the number of quasiparticles trapped in the junction.
 *Andreev spin qubits* rely instead on the odd manifold, with the qubit states corresponding to the spin of a single trapped quasiparticle.
 In this case, spin-orbit interaction becomes a necessary ingredient to lift spin degeneracy and allow control of individual states.
-In both types of qubits, readout is typically performed by measuring state-dependent supercurrent or resonator frequency shifts, where as qubit operations can be achieved through microwave irradiation.
+In both types of qubits, readout is typically performed by measuring state-dependent supercurrent or resonator frequency shifts, whereas qubit operations can be achieved through microwave irradiation.
 
 ## Metallic weak links
 
