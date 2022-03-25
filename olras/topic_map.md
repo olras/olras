@@ -38,39 +38,51 @@ $$
 $$
 
 where $\mathbf{\mathcal{C}} = \begin{pmatrix} c_{\uparrow} & c_{\downarrow} & c_{\uparrow}^\dagger & c_{\downarrow}^\dagger \end{pmatrix}^T$.
-By diagonalizing $H_\mathrm{BdG}$ we find quasiparticle operators $d_i$ that bring $\mathcal{H} = \sum_{i} \varepsilon_i d_i^\dagger d_i$, with $\varepsilon_i \ge 0$.
-Assuming the Fermi energy is much larger than the superconducting pairing ($|\mu| \gg |\Delta_{i}|$), we find
+By diagonalizing $H_\mathrm{BdG}$ we find quasiparticle operators $d_i$ that allows to write the hamiltonian as $\mathcal{H} = \sum_{i} \varepsilon_i d_i^\dagger d_i$, with $\varepsilon_i \ge 0$.
+Assuming the Fermi energy is much larger than the superconducting pairing ($|\mu| \gg |\Delta_{i}|$), we obtain
 
 $$
 \begin{aligned}
 \varepsilon_{_i} &\approx \mu + \frac{|\Delta_1 + \Delta_2 |^2}{2\mu} \\
-d_1 &\approx \left(\frac{|\Delta_1 + \Delta_2 |^2}{2\mu}\right) c_\downarrow +  c_\uparrow^\dagger \\
-d_2 &\approx  c_\downarrow^\dagger - \left(\frac{|\Delta_1 + \Delta_2 |^2}{2\mu}\right) c_\uparrow \\
+d_\downarrow &\approx \left(\frac{|\Delta_1 + \Delta_2 |^2}{2\mu}\right) c_\downarrow +  c_\uparrow^\dagger \\
+d_\uparrow &\approx  c_\downarrow^\dagger - \left(\frac{|\Delta_1 + \Delta_2 |^2}{2\mu}\right) c_\uparrow \\
 \end{aligned}
 $$
 
-We can construct the ground state wavefunction $|\Psi\rangle$ by taking the vacuum state $|0\rangle$ and projecting out all components with quasiparticles:
+The manifold of many-body states spanned by $d_i$ is frequently dubbed the *Andreev doublet*.
+To explore interesting properties of ABS, we compute the wavefunctions of these states explicitly.
+The ground state does not contain any quasiparticles.
+Therefore, we can construct it by taking the vacuum state $|0\rangle$ and projecting out all components with quasiparticles:
 
 $$
-|\Psi \rangle \propto d_1 d_2 |0\rangle \propto -\left(\frac{|\Delta_1 + \Delta_2 |^2}{2\mu}\right)|0\rangle + |\uparrow \downarrow \rangle
+|g \rangle \propto d_\downarrow d_\uparrow |0\rangle \propto -\left(\frac{|\Delta_1 + \Delta_2 |^2}{2\mu}\right)|0\rangle + |\uparrow \downarrow \rangle
 $$
 
-The wavefunction shows [one](one) of the most striking properties of ABS: *they are localized states in metallic regions *without* charge quantization.*
-
-We now study what happens when there is a finite phase difference $\varphi$ between the superconductors.
-For simplicity we consider $|\Delta_1| = |\Delta_2| = |\Delta|$.
-The ground state energy becomes
+The wavefunction shows one of the most striking properties of ABS: *they are localized states in weak links *without* charge quantization.*
+The ground state energy reads
 
 $$
-E = -2 \mu - \frac{2|\Delta|^2}{\mu}(1 + \cos(\varphi)).
+E = -\mu - \frac{|\Delta|^2}{\mu}(1 + \cos(\varphi)).
 $$
 
-Here we observe another striking property of ABS.
-*Because the ground state energy disperses with $\varphi$, the ABS mediate supercurrent between the superconductors* with magnitude
+Where for simplicity we assumed $|\Delta_1| = |\Delta_2| = |\Delta|$.
+This reveals yet another important property of ABS.
+*Because the ground state energy disperses with $\varphi$, ABS mediate supercurrent between the superconductors* with magnitude
 
 $$
-I = \frac{2e}{\hbar} \frac{dE}{d\varphi} = \frac{4e |\Delta|^2}{\hbar\mu}\sin(\varphi).
+I = \frac{2e}{\hbar} \frac{dE}{d\varphi} = \frac{2e |\Delta|^2}{\hbar\mu}\sin(\varphi).
 $$
+
+A similar calculation shows that the doubly-excited state $|e \rangle = d_{\downarrow}^\dagger d_{\uparrow}^\dagger |g\rangle = |\uparrow \downarrow\rangle$ carries an opposite supercurrent of equal magnitude.
+The states $| g \rangle$ and $| e \rangle$ contain even numbers of quasiparticles, and thus span the *even* manifold.
+The *odd* manifold is spanned by a pair of zero-energy, degenerate states with single quasiparticles
+
+$$
+d_\downarrow^\dagger |g\rangle \propto |\downarrow \rangle \\
+d_\uparrow^\dagger |g\rangle \propto |\uparrow \rangle
+$$
+
+In contrast with the even manifold, their energy does not disperse with $\varphi$ and hence they do not carry a supercurrent.
 
 ## Point scatterer perspective
 <!-- When most of the wave function is in the superconductor, the scattering state basis is the most appropriate. -->
@@ -207,6 +219,13 @@ We summarize the features of each model in {numref}`model-table`.
 ## Superconductor-semiconductor structures
 
 ## Andreev bound states as qubits
+Qubits based on superconducting circuits (such as transmons or charge qubits) rely on bosonic excitations of the superconducting condensate which are mediated by a large number of ABS.
+In contrast, Andreev qubits store quantum information in the fermionic degrees of freedom of individual Andreev doublets.
+Specifically, in *Andreev level qubits* the computational basis corresponds to the even manifold of the doublet.
+Information is therefore encoded in the number of quasiparticles trapped in the junction.
+*Andreev spin qubits* rely instead on the odd manifold, with the qubit states corresponding to the spin of a single trapped quasiparticle.
+In this case, spin-orbit interaction becomes a necessary ingredient to lift spin degeneracy and allow control of individual states.
+In both types of qubits, readout is typically performed by measuring state-dependent supercurrent or resonator frequency shifts, where as qubit operations can be achieved through microwave irradiation.
 
 ## Metallic weak links
 
@@ -220,7 +239,7 @@ In some 2D planes of parameter space this Berry curvature can integrate to non-z
 
 ## Majorana zero modes
 
-
+## References
 ```{bibliography}
 :filter: docname in docnames
 ```

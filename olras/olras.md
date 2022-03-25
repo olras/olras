@@ -20,8 +20,9 @@ We are setting up the project and its infrasturure, bear with us until we add co
 
 ## Contributing
 
-Everyone welcome to contribute, while a few of us (Anton Akhmerov, Valla Fatemi, Andre Melo) moderate the development of the review.
+Everyone welcome to contribute, while a few of us (Anton Akhmerov, Valla Fatemi, André Melo) moderate the development of the review.
 
+## References
 ```{bibliography}
 :filter: docname in docnames
 ```
