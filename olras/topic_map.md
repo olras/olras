@@ -1,12 +1,13 @@
 # Minimal models
 <!-- Andreev states have rich physics that can be understood from different perspectives -->
-Andreev states are coherent superpositions of electrons and holes that exist in a non-superconducting region or a weak link between two superconductors, and are coupled by reflecting from a nearby superconductor.
-If the same normal region is coupled to more than one superconductor, the energies of the Andreev states start depending on the superconducting phase difference through the *energy-phase relation*, and therefore they carry supercurrent.
-The interplay between the physics of the normal region and the superconductor makes Andreev states manifest in very different regimes and alters their properties.
-Depending on the situation one considers, a different perspective on the Andreev states captures the essential physics most naturally.
-To illustrate this variation, we begin with three toy models of Andreev states, each capturing a different way of viewing them.
+A superconductor in proximity with a non-superconducting region introduces coherent coupling between electrons and holes through *Andreev reflection*.
+Under certain conditions this process becomes resonant and forms stable superpositions of electrons and holes known as *Andreev bound states* (ABS).
+If the same normal region is coupled to more than one superconductor, the bound state energies become dependent on the superconducting phase differences between terminals, which implies the ABS carry supercurrent across superconductors.
+The interplay between the physics of the normal region and the superconductors makes ABS manifest in very different regimes and alters their properties.
+Depending on the situation one considers, a different perspective on the ABS captures the essential physics most naturally.
+To illustrate this variation, we begin with three toy models, each corresponding to a different physical limit.
 
-## Tunneling perspective
+## Weak coupling - tunneling perspective
 <!-- When the normal region has few levels and weak tunneling, a Hamiltonian description is natural. -->
 The simplest normal region is a quantum dot containing a single electron level with a bare hamiltonian
 
@@ -84,12 +85,31 @@ $$
 
 In contrast with the even manifold, their energy does not disperse with $\varphi$ and hence they do not carry a supercurrent.
 
-## Point scatterer perspective
+## Strong coupling
+In the previous subsection we considered a normal dot that is only weakly coupled to the two superconductors.
+This allowed us to avoid explicitly modelling the superconducting regions and to capture their effects on the dot through an effective perturbative term.
+In this subsection we go beyond this limit and allow the superconductors to be strongly coupled to the normal region.
+To do so, it is useful to adopt a different perspective that focuses on how electrons and hole waves propagate in the normal and superconducting regions.
+We consider an electron with energy $E < \Delta$ travelling in a one-dimensional normal region sandwiched between two superconductors.
+Once it reaches an interface with a superconductor it must be reflected back to the normal region because there are no available single-particle states below the gap.
+While this can happen through simple normal reflection, sufficiently transparent interfaces support another energy-conserving process: Andreev reflection to hole.
+
+:::{admonition} A primer on Andreev reflection
+:class: note, dropdown
+placeholder
+:::
+
+The resulting hole will then travel towards the other normal-superconductor interface, where it also undergoes Andreev reflection to an electron, restarting the cycle.
+If these processes interfere constructively, they give rise to an ABS.
+This gives us another perspective of how ABS are formed, namely through sucessive Andreev reflections.
+Because each Andreev reflection results in charge transfer of $2e$, it also provides a microscopic explanation of how an ABS mediates supercurrent.
+Below we formalize this treatment of the problem through the scattering formalism, which analyzes how electron waves entering a superconductor reflect from it, and from the junction.
+
+### Point scatterer perspective
 <!-- When most of the wave function is in the superconductor, the scattering state basis is the most appropriate. -->
 The weak link between two superconductors can be arbitrarily small.
 In the extreme limit of the *Dayem bridge* there is no normal region at all, only a constriction between two superconductors.
-The natural starting point for describing this *short junction* regime is the scattering approach, which analyzes how electron waves entering a superconductor reflect from it, and from the junction.
-We consider two superconducting contacts with phase difference $\varphi$ connected by a normal region with a point scatterer.
+We consider two superconducting contacts with phase difference $\varphi$ connected by a normal region with a point scatterer, also known as the *short junction* regime.
 Scattering states at energy $\varepsilon$ in the left and normal regions are superpositions of incoming and outgoing states:
 
 $$
@@ -140,13 +160,14 @@ $$
 E = \Delta \sqrt{1 - t \sin^2 \frac{\varphi}{2}}
 $$(short_junction)
 
+
 ## Large normal region perspective
 <!-- When quasiparticles spend most of the time in the normal region, the superconductors become hard wall boundaries. -->
 In the opposite limit, the normal region is sufficiently large for the quasiparticles to spend most of the time outside of the superconductor.
 In other words, in the *long junction* limit, the quasiparticle dwell time $\tau_\text{dw} = v_F / L $ (with $v_F$ the Fermi velocity, $L$ the size of the normal region, and $\hbar$ the reduced Plank constant) becomes much larger than the Andreev reflection time $\hbar/\Delta$, as follows from the uncertainty relation.
 The quasiparticle wave functions then are linear superpositions of travelling waves, matched at the interfaces with the superconductor by the effective boundary conditions.
 
-To derive the spectrum of a long junction we use a semiclassical approach.
+While it is possible to use the scattering formalism to derive the spectrum of a long junction, we resort to a simpler semiclassical approach.
 In particular, we apply the [Bohr-Sommerfeld](https://en.wikipedia.org/wiki/Old_quantum_theory#Basic_principles) condition, which states that bound states arise when there are closed trajectories in which quasiparticles acquire a total phase of $2 \pi n$, with $n$ integer.
 We consider right-moving electron in the weak link.
 As it moves through the weak link, it acquires a dynamical phase $kL$.
@@ -233,7 +254,7 @@ In both types of qubits, readout is typically performed by measuring state-depen
 Attaching three or more superconducting contacts to a weak link enables physical phenomena with no analogues in two-terminal devices.
 One example is *multiplet supercurrent*, where multiterminal Andreev states mediate dissipationless charge transfers across superconducting electrodes at finite voltage.
 The simplest implementation of this is a three-terminal device where two terminals biased at $n_1 V_1 = n_2 V_2$ each transfer $n_1$ and $n_2$ Cooper pairs to a third grounded terminal.
-Another popular avenue of research focuses on realizing effective topological matter in multiterminal junctions, where the superconducting phase differences playing the role of crystal momenta.
+Another popular avenue of research focuses on realizing effective topological matter in multiterminal junctions, where the superconducting phase differences play the role of crystal momenta.
 By carefully engineering the weak link, the resulting Andreev bands can host topologically protected Weyl points that serve as monopoles of Berry curvature.
 In some 2D planes of parameter space this Berry curvature can integrate to non-zero Chern numbers, which manifests as quantized transconductance.
 
