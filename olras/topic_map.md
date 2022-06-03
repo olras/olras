@@ -205,41 +205,48 @@ This corresponds to the expected supercurrent mediated by Andreev reflections oc
 ## Comparison of models
 We summarize the features of each model in {numref}`model-table`.
 
-```{list-table} Comparison of models
+```{list-table} Comparison of models. Definitions of some variables: $\xi$, $\tau_\text{dw}$, $\Gamma$, $\delta \Gamma$
 :header-rows: 1
 :name: model-table
 
 * - Model
   - Basis
   - Physical limit
-  - Supercurrent scale
   - Relevant parameters
+  - Supercurrent scale
   - Can describe
 * - Dot
   - Localized dot wavefunctions
-  -
-  -
-  -
+  - $\Gamma, \varepsilon \ll \Delta, L \ll \xi$
+  - $\varepsilon, \Gamma, \delta \Gamma$
+  - $e \Gamma / \hbar$
   - Finite charging energy
 * - Short junction
   - Scattering states in the superconducting leads
-  -
-  -
-  -
-  -
+  - $L \ll \xi$
+  - $\Delta, \tau$
+  - $e \Delta / \hbar$
+  - Point scatterers
 * - Long junction
-  -
-  -
-  -
-  -
-  -
+  - Scattering states in the normal region
+  - $L \gg \xi$
+  - $\tau_\text{dw}, \tau$
+  - $e / \tau_\text{dw}$
+  - Band structure
 ```
 
 # Sub-fields of Andreev states
+Initial experiments on Andreev states were carried out in metallic junctions where these states form a continuum.
+Modern research, however, focuses on resolving and manipulating individual states.
 
 ## Superconductor-semiconductor structures
+Due to their low density of states, semiconductors offer a reliable platform to confine only a small number of states between two superconductors.
+Additionally, the variability of the material physical properties allows to extend Andreev physics by combining it with other phenomena: spin physics, Coulomb blockade and tunability of electron wave functions in the normal region.
+Initial attempts to observe Josephson physics in quantum wells were met with fabrication difficulties.
+However, the second generation of experiments focusing on carbon nanotubes, semiconducting nanowires and, later, graphene, resulted in a reliable and commonly used approach.
+Nowadays, gradual accumulation of expertise in fabrication and combining different materials enabled a wide variety of platforms and devices to be within experimental reach.
 
-## Andreev bound states as qubits
+## Qubit applications
 Qubits based on superconducting circuits (such as transmons or charge qubits) rely on bosonic excitations of the superconducting condensate which are mediated by a large number of ABS.
 In contrast, Andreev qubits store quantum information in the fermionic degrees of freedom of individual Andreev doublets.
 Specifically, in *Andreev level qubits* the computational basis corresponds to the even manifold of the doublet.
@@ -248,8 +255,6 @@ Information is therefore encoded in the number of quasiparticles trapped in the 
 In this case, spin-orbit interaction becomes a necessary ingredient to lift spin degeneracy and allow control of individual states.
 In both types of qubits, readout is typically performed by measuring state-dependent supercurrent or resonator frequency shifts, whereas qubit operations can be achieved through microwave irradiation.
 
-## Metallic weak links
-
 ## Multiterminal devices
 Attaching three or more superconducting contacts to a weak link enables physical phenomena with no analogues in two-terminal devices.
 One example is *multiplet supercurrent*, where multiterminal Andreev states mediate dissipationless charge transfers across superconducting electrodes at finite voltage.
@@ -257,8 +262,19 @@ The simplest implementation of this is a three-terminal device where two termina
 Another popular avenue of research focuses on realizing effective topological matter in multiterminal junctions, where the superconducting phase differences play the role of crystal momenta.
 By carefully engineering the weak link, the resulting Andreev bands can host topologically protected Weyl points that serve as monopoles of Berry curvature.
 In some 2D planes of parameter space this Berry curvature can integrate to non-zero Chern numbers, which manifests as quantized transconductance.
+Extending the sample geometry with multiple normal regions weakly coupled through superconductors implements Andreev molecules due to crossed Andreev reflection processes.
 
 ## Majorana zero modes
+Carefully engineering a combination of superconducting proximity effect, control over the electron spin and sppatial position allows to split a single Andreev bound state into two.
+The fractionalized nature of Majorana zero modes also allows manipulation of quantum information in an error-free way.
+Each of the halves---the Majorana zero modes---is protected from dephasing because they are pinned to zero energy due to particle-hole symmetry.
+Despite this proposed robustness, reliably creating Majorana states is a challenging task with active experimental search under way.
+
+## Other topics
+Andreev physics also manifests in the following physical systems:
+- Yu-Shiba-Rusinov states bound to magnetic impurities at the surface of a superconductor
+- Caroli-de Gennes-Matricon states in the vortex cores of type-II superconductors
+- States confined to a scattering region of superconducting break junctions
 
 ## References
 ```{bibliography}
