@@ -9,73 +9,65 @@ To illustrate this variation, we begin with three toy models, each corresponding
 
 ## Weak coupling - tunneling perspective
 <!-- When the normal region has few levels and weak tunneling, a Hamiltonian description is natural. -->
-The simplest normal region is a quantum dot containing a single electron level with a bare hamiltonian
+The simplest normal region is a quantum dot containing a single electron level:
 
 $$
-H_\mathrm{dot} = -\mu (c_\downarrow^\dagger c_\downarrow + c_\uparrow^\dagger c_\uparrow)
+H_\mathrm{dot} = \varepsilon (c_\downarrow^\dagger c_\downarrow + c_\uparrow^\dagger c_\uparrow)
 $$
 
-where $\mu$ is the chemical potential of the dot.
+where $\varepsilon$ is the energy of the level.
 Weakly coupling the quantum dot to the superconductors imbues a part of the superconducting properties on the dot level, introducing a *proximity-induced superconducting pairing*.
-Within the mean-field approximation, we can model this effect with the term
+Within the mean-field approximation, this effect is captured by the term
 
 $$
-H_\mathrm{SC} = (\Delta_1^* + \Delta_2^*) c_\uparrow c_\downarrow  + (\Delta_1 + \Delta_2)  c_\downarrow^\dagger c_\uparrow^\dagger
+H_\mathrm{SC} = (\Gamma_1 e^{-i\frac{\varphi}{2}} + \Gamma_2 e^{i\frac{\varphi}{2}}) c_\uparrow c_\downarrow  + (\Gamma_1e^{i\frac{\varphi}{2}} + \Gamma_2e^{-i\frac{\varphi}{2}}) c_\downarrow^\dagger c_\uparrow^\dagger
 $$
 
-with $\Delta_{1, 2}$ the induced superconducting pairing of each superconductor.
-Using the Bogoliubov De Gennes formalism, we can bring the Hamiltonian to a quadratic form
+where $\Gamma_{1, 2}$ are the hoppings from the dot to each superconductor and $\varphi$ the superconducting phase difference.
+The Bogoliubov De Gennes formalism allows us to rewrite the Hamiltonian in the form
 
 $$
 \begin{aligned}
 \mathcal{H} &= \frac{1}{2} \mathbf{\mathcal{C}}^\dagger
 \begin{pmatrix}
--\mu & 0 & 0 & -\Delta_1 - \Delta_2\\
-0 & -\mu & \Delta_1 + \Delta_2 & 0\\
-0 & \Delta_1^* + \Delta_2^* & \mu & 0\\
--\Delta_1^* - \Delta_2^*  & 0 & 0 & \mu \end{pmatrix}\mathbf{\mathcal{C}} \\
-&= \frac{1}{2} \mathbf{\mathcal{C}}^\dagger H_\mathrm{BdG} \mathbf{\mathcal{C}}^\dagger
+\varepsilon & 0 & 0 & -\Gamma_1e^{i\frac{\varphi}{2}} - \Gamma_2e^{-i\frac{\varphi}{2}}\\
+0 & \varepsilon &\Gamma_1e^{i\frac{\varphi}{2}} + \Gamma_2e^{-i\frac{\varphi}{2}} & 0\\
+0 &\Gamma_1 e^{-i\frac{\varphi}{2}} + \Gamma_2 e^{i\frac{\varphi}{2}} & -\varepsilon & 0\\
+-\Gamma_1 e^{-i\frac{\varphi}{2}} - \Gamma_2 e^{i\frac{\varphi}{2}}  & 0 & 0 & -\varepsilon \end{pmatrix}\mathbf{\mathcal{C}} \\
+&= \frac{1}{2} \mathbf{\mathcal{C}}^\dagger H_\mathrm{BdG} \mathbf{\mathcal{C}}
 \end{aligned}
 $$
 
 where $\mathbf{\mathcal{C}} = \begin{pmatrix} c_{\uparrow} & c_{\downarrow} & c_{\uparrow}^\dagger & c_{\downarrow}^\dagger \end{pmatrix}^T$.
-By diagonalizing $H_\mathrm{BdG}$ we find quasiparticle operators $d_i$ that allows to write the hamiltonian as $\mathcal{H} = \sum_{i} \varepsilon_i d_i^\dagger d_i$, with $\varepsilon_i \ge 0$.
-Assuming the Fermi energy is much larger than the superconducting pairing ($|\mu| \gg |\Delta_{i}|$), we obtain
+The eigenvectors of $H_\mathrm{BdG}$ correspond to quasiparticle operators $d_i$ that diagonalize the full hamiltonian $\mathcal{H} = \sum_i \varepsilon_i d_i^\dagger d_i$.
+The manifold of many-body states spanned by $d_i$ is frequently dubbed the *Andreev doublet*.
+For illustration purposes we compute these operators explicitly in the limit of $\varepsilon = 0$:
 
 $$
 \begin{aligned}
-\varepsilon_{_i} &\approx \mu + \frac{|\Delta_1 + \Delta_2 |^2}{2\mu} \\
-d_\downarrow &\approx \left(\frac{|\Delta_1 + \Delta_2 |^2}{2\mu}\right) c_\downarrow +  c_\uparrow^\dagger \\
-d_\uparrow &\approx  c_\downarrow^\dagger - \left(\frac{|\Delta_1 + \Delta_2 |^2}{2\mu}\right) c_\uparrow \\
+d_\uparrow &=  \frac{1}{\sqrt{2}} (c_\downarrow^\dagger - c_\uparrow) \\
+d_\downarrow &= \frac{1}{\sqrt{2}} (c_\downarrow +  c_\uparrow^\dagger) \\
 \end{aligned}
 $$
 
-The manifold of many-body states spanned by $d_i$ is frequently dubbed the *Andreev doublet*.
-To explore interesting properties of ABS, we compute the wavefunctions of these states explicitly.
 The ground state does not contain any quasiparticles.
 Therefore, we can construct it by taking the vacuum state $|0\rangle$ and projecting out all components with quasiparticles:
 
 $$
-|g \rangle \propto d_\downarrow d_\uparrow |0\rangle \propto -\left(\frac{|\Delta_1 + \Delta_2 |^2}{2\mu}\right)|0\rangle + |\uparrow \downarrow \rangle
+|g \rangle = d_\downarrow d_\uparrow |0\rangle = \frac{1}{\sqrt{2}} ( |0\rangle - |\uparrow \downarrow \rangle)
 $$
 
-The wavefunction shows one of the most striking properties of ABS: *they are localized states in weak links *without* charge quantization.*
-The ground state energy reads
+The wave function shows one of the most striking properties of ABS: *they are localized states in weak links *without* charge quantization.*
+Turning to the ground state energy we find
 
 $$
-E = -\mu - \frac{|\Delta|^2}{\mu}(1 + \cos(\varphi)).
+E_\text{gs} = - |\Gamma \cos{\varphi/2} + i\delta \Gamma \sin{\varphi/2}|,
 $$
 
-Where for simplicity we assumed $|\Delta_1| = |\Delta_2| = |\Delta|$.
-This reveals yet another important property of ABS.
-*Because the ground state energy disperses with $\varphi$, ABS mediate supercurrent between the superconductors* with magnitude
-
-$$
-I = \frac{2e}{\hbar} \frac{dE}{d\varphi} = \frac{2e |\Delta|^2}{\hbar\mu}\sin(\varphi).
-$$
-
+where we introduced $\Gamma = \Gamma_1 + \Gamma_2$ and $\delta \Gamma = \Gamma_1 - \Gamma_2$.
+This reveals yet another important property of ABS: *ecause the ground state energy disperses with $\varphi$, ABS mediate supercurrent between the superconductors* with magnitude $I = \frac{2e}{\hbar} \frac{dE_\text{gs}}{d\varphi}$.
 A similar calculation shows that the doubly-excited state $|e \rangle = d_{\downarrow}^\dagger d_{\uparrow}^\dagger |g\rangle = |\uparrow \downarrow\rangle$ carries an opposite supercurrent of equal magnitude.
-The states $| g \rangle$ and $| e \rangle$ contain even numbers of quasiparticles, and thus span the *even* manifold.
+Because $| g \rangle$ and $| e \rangle$ contain even numbers of quasiparticles, they span the *even* manifold.
 The *odd* manifold is spanned by a pair of zero-energy, degenerate states with single quasiparticles
 
 $$
@@ -164,7 +156,7 @@ $$(short_junction)
 ## Large normal region perspective
 <!-- When quasiparticles spend most of the time in the normal region, the superconductors become hard wall boundaries. -->
 In the opposite limit, the normal region is sufficiently large for the quasiparticles to spend most of the time outside of the superconductor.
-In other words, in the *long junction* limit, the quasiparticle dwell time $\tau_\text{dw} = v_F / L $ (with $v_F$ the Fermi velocity, $L$ the size of the normal region, and $\hbar$ the reduced Plank constant) becomes much larger than the Andreev reflection time $\hbar/\Delta$, as follows from the uncertainty relation.
+In other words, in the *long junction* limit, the quasiparticle dwell time $\tau_\text{dw} = L / v_F $ (with $v_F$ the Fermi velocity, $L$ the size of the normal region, and $\hbar$ the reduced Plank constant) becomes much larger than the Andreev reflection time $\hbar/\Delta$, as follows from the uncertainty relation.
 The quasiparticle wave functions then are linear superpositions of travelling waves, matched at the interfaces with the superconductor by the effective boundary conditions.
 
 While it is possible to use the scattering formalism to derive the spectrum of a long junction, we resort to a simpler semiclassical approach.
@@ -205,7 +197,7 @@ This corresponds to the expected supercurrent mediated by Andreev reflections oc
 ## Comparison of models
 We summarize the features of each model in {numref}`model-table`.
 
-```{list-table} Comparison of models. Definitions of some variables: $\xi$, $\tau_\text{dw}$, $\Gamma$, $\delta \Gamma$
+```{list-table} Comparison of models. Definitions of some variables: $\xi =  \hbar v_F / \Delta $ is the superconducting coherence length, $\tau_\text{dw} = L / v_F$ is the quasiparticle dwell time in the normal region, $\Gamma = \Gamma_1 + \Gamma_2$ is the total tunneling rate and $\delta \Gamma = \Gamma_1 - \Gamma_2$ is the difference in tunneling rates.
 :header-rows: 1
 :name: model-table
 
@@ -265,7 +257,7 @@ In some 2D planes of parameter space this Berry curvature can integrate to non-z
 Extending the sample geometry with multiple normal regions weakly coupled through superconductors implements Andreev molecules due to crossed Andreev reflection processes.
 
 ## Majorana zero modes
-Carefully engineering a combination of superconducting proximity effect, control over the electron spin and sppatial position allows to split a single Andreev bound state into two.
+Carefully engineering a combination of the superconducting proximity effect, control over the electron spin and spatial position allows to split a single Andreev bound state into two.
 The fractionalized nature of Majorana zero modes also allows manipulation of quantum information in an error-free way.
 Each of the halves---the Majorana zero modes---is protected from dephasing because they are pinned to zero energy due to particle-hole symmetry.
 Despite this proposed robustness, reliably creating Majorana states is a challenging task with active experimental search under way.
