@@ -7,5 +7,4 @@ The project is in its early planning phase, see the issue tracker for more infor
 
 ## Setup
 1. Install the `python` dependencies with `conda env create -f environment.yaml`.
-2. Initialize `pre-commit` with `pre-commit install`
-3. Build the book with `jupyter-book build olras`
+2. Build the book with `jupyter-book build olras`
