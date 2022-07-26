@@ -51,10 +51,11 @@ d_\downarrow &= \frac{1}{\sqrt{2}} (c_\downarrow +  c_\uparrow^\dagger) \\
 $$
 
 The ground state does not contain any quasiparticles.
-Therefore, we can construct it by taking the vacuum state $|0\rangle$ and projecting out all components with quasiparticles:
+Therefore, we can construct it by taking the vacuum state $|0\rangle$ and projecting out all components with quasiparticles with $d_\downarrow d_\uparrow |0\rangle$.
+We obtain:
 
 $$
-|g \rangle = d_\downarrow d_\uparrow |0\rangle = \frac{1}{\sqrt{2}} ( |0\rangle - |\uparrow \downarrow \rangle)
+|g \rangle = \frac{1}{\sqrt{2}} ( |0\rangle - |\uparrow \downarrow \rangle)
 $$
 
 The wave function shows one of the most striking properties of ABS: *they are localized states in weak links *without* charge quantization.*
@@ -65,14 +66,14 @@ E_\text{gs} = - |\Gamma \cos{\varphi/2} + i\delta \Gamma \sin{\varphi/2}|,
 $$
 
 where we introduced $\Gamma = \Gamma_1 + \Gamma_2$ and $\delta \Gamma = \Gamma_1 - \Gamma_2$.
-This reveals yet another important property of ABS: *ecause the ground state energy disperses with $\varphi$, ABS mediate supercurrent between the superconductors* with magnitude $I = \frac{2e}{\hbar} \frac{dE_\text{gs}}{d\varphi}$.
-A similar calculation shows that the doubly-excited state $|e \rangle = d_{\downarrow}^\dagger d_{\uparrow}^\dagger |g\rangle = |\uparrow \downarrow\rangle$ carries an opposite supercurrent of equal magnitude.
+This reveals yet another important property of ABS: *because the ground state energy disperses with $\varphi$, ABS mediate supercurrent between the superconductors* with magnitude $I = \frac{2e}{\hbar} \frac{dE_\text{gs}}{d\varphi}$.
+A similar calculation shows that the doubly-excited state $|e \rangle = d_{\downarrow}^\dagger d_{\uparrow}^\dagger |g\rangle = \frac{1}{\sqrt{2}}(|0\rangle + |\uparrow \downarrow\rangle)$ carries an opposite supercurrent of equal magnitude.
 Because $| g \rangle$ and $| e \rangle$ contain even numbers of quasiparticles, they span the *even* manifold.
 The *odd* manifold is spanned by a pair of zero-energy, degenerate states with single quasiparticles
 
 $$
-d_\downarrow^\dagger |g\rangle \propto |\downarrow \rangle \\
-d_\uparrow^\dagger |g\rangle \propto |\uparrow \rangle
+d_\downarrow^\dagger |g\rangle = |\downarrow \rangle \\
+d_\uparrow^\dagger |g\rangle = |\uparrow \rangle
 $$
 
 In contrast with the even manifold, their energy does not disperse with $\varphi$ and hence they do not carry a supercurrent.
