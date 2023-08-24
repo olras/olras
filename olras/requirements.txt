@@ -3,3 +3,4 @@ betterbib
 xarray
 scipy
 hvplot
+pyparsing
