@@ -4,8 +4,5 @@ channels:
 dependencies:
   - python>=3.9
   - pip
-  - xarray
-  - scipy
-  - hvplot
   - pip:
     - -r olras/requirements.txt
