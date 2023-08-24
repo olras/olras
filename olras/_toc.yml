@@ -10,3 +10,4 @@ parts:
   - caption: Overview
     chapters:
     - file: topic_map
+    - file: andreev_qubits
