@@ -6,5 +6,5 @@ Welcome to what will become a community-run review of physics of single quantum 
 The project is in its early planning phase, see the issue tracker for more information.
 
 ## Setup
-1. Install the `python` dependencies with `conda env create -f environment.yaml`.
+1. Install the `python` dependencies with `conda env create -f environment.yml`.
 2. Build the book with `jupyter-book build olras`
