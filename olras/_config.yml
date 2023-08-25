@@ -39,7 +39,9 @@ sphinx:
       - crossorigin: anonymous
     - - https://cdn.bokeh.org/bokeh/release/bokeh-tables-3.2.2.min.js
       - crossorigin: anonymous
-    - - https://cdn.holoviz.org/panel/1.2.2-a.3/dist/panel.min.js
+    - - https://cdn.bokeh.org/bokeh/release/bokeh-gl-3.2.2.min.js
+      - crossorigin: anonymous
+    - - https://cdn.holoviz.org/panel/1.2.1/dist/panel.min.js
       - crossorigin: anonymous
     - - https://cdn.jsdelivr.net/npm/jspanel4@4.16.1/dist/jspanel.min.js
       - crossorigin: anonymous
