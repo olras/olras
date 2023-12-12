@@ -19,10 +19,12 @@ kernelspec:
 
 ## Proximity effect
 
+<!-- A normal region in contact with a superconductor becomes a superconductor. -->
 Andreev reflection converts electron-like into hole-like quasiparticles.
 Thus, the interface with a superconductor induces superconducing correlations in a normal material.
 
-We demonstrate this proximity effect by considering a one-dimensional electron gas coupled to a superconductor, depicted in the figure.
+<!-- We consider a normal metal coupled to a superconductor. -->
+We demonstrate this proximity effect by normal metal coupled to a superconductor, depicted in the figure.
 The normal region has a Hamiltonian $H_N$, the superconducting region $H_{SC}$, and the hopping between the two regions is $T$.
 Thus, choosing a basis $\Psi = (\mathcal{D}(k), \mathcal{C}(k))^T$ where $\mathcal{D}(k)$ annihilates a quasiparticle with momentum $k$ in the normal region and $\mathcal{C}(k)$ in ths superconducting region, we arrive to the Hamiltonian
 $$
@@ -34,6 +36,7 @@ H = \sum_k \Psi^{\dagger}(k)\left(
 \right)\Psi(k)~.
 $$
 
+<!-- The coupling between the two regions renormalizes the Hamiltonian of the normal region. -->
 We then calculate the Green's function in the normal region with the Schur's complement of $H$:
 $$
 G_N(\omega) = (H_N + \Sigma(\omega))^{-1}~,\quad \Sigma(\omega) = T (\omega - H_{SC})^{-1}T^{\dagger}~.
@@ -43,6 +46,7 @@ $$
 \tilde{H}_N = H_N + \Sigma(\omega)~.
 $$
 
+<!-- This renormalization includes an effective pairing potential. -->
 Assuming that the superconductor has a time-reversal symmetric Hamiltonian, we can write it with the Bogoliubov-de Gennes formalism as
 $$
 H_{SC}=\sum_k \mathcal{C}_k^{\dagger}[(\epsilon_{k}\tau_z + \Delta \tau_x)\otimes\sigma_0] \mathcal{C}_k
@@ -61,6 +65,7 @@ $$
 
 ### Proximity effect in quantum dots
 
+<!-- Using the equations above, we recover our previous results. -->
 If we now consider a single-level spin-degenerate quantum dot with a Hamiltonian
 $$
 H_N = -\mu \sum_{\sigma} d_{\sigma}^{\dagger}d_{\sigma} = \mathcal{D}^{\dagger}(-\mu \tau_0\otimes \sigma_0)\mathcal{D}
