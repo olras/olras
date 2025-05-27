@@ -1,0 +1,33 @@
+[project]
+authors = [{name = "Antonio Manesco", email = "am@antoniomanesco.org"}]
+dependencies = []
+name = "olras"
+requires-python = ">= 3.11"
+version = "0.1.0"
+
+[build-system]
+build-backend = "hatchling.build"
+requires = ["hatchling"]
+
+[tool.pixi.workspace]
+channels = ["conda-forge"]
+platforms = ["osx-64"]
+
+[tool.pixi.pypi-dependencies]
+olras = { path = ".", editable = true }
+
+[tool.pixi.tasks]
+build = "jupyter-book build olras"
+
+[tool.pixi.dependencies]
+jupyter-book = ">=1.0.4.post1,<2"
+sphinx = ">=7.4.7,<8"
+jupyter = ">=1.1.1,<2"
+jupytext = ">=1.17.1,<2"
+scipy = ">=1.15.2,<2"
+xarray = ">=2025.4.0,<2026"
+pyparsing = ">=3.2.3,<4"
+hvplot = ">=0.11.3,<0.12"
+holoviews = ">=1.20.2,<2"
+bokeh = ">=3.7.3,<4"
+jupyter_bokeh = ">=4.0.5,<5"
