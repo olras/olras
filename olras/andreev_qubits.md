@@ -45,7 +45,6 @@ tags: [remove-input]
 import xarray as xr
 import hvplot.xarray
 import warnings
-warnings.filterwarnings("ignore")
 
 andreev_data = xr.load_dataset("andreev_qubits.nc")
 
@@ -57,6 +56,7 @@ bstruct_plot = andreev_data.sel(phase=0).hvplot.scatter(width=300,
                                                         size=1,
                                                         c="spin",
                                                         ylim=(-80, 50),
+                                                        dynamic=False
                                                        )
 andreev_plot = andreev_data.sel(k=0).hvplot.line(width=300,
                                                  y="andreev_energies",
@@ -65,6 +65,7 @@ andreev_plot = andreev_data.sel(k=0).hvplot.line(width=300,
                                                  legend=False,
                                                  c="black",
                                                  title="",
+                                                 dynamic=False,
                                                 )
 
 bstruct_plot + andreev_plot
