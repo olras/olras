@@ -45,30 +45,42 @@ tags: [remove-input]
 import xarray as xr
 import hvplot.xarray
 import warnings
+warnings.filterwarnings("ignore")
 
-andreev_data = xr.load_dataset("andreev_qubits.nc")
+ds_andreev = xr.load_dataset("./simulations/asq/data/andreev_levels.nc")
+ds_bands = xr.load_dataset("./simulations/asq/data/soc_bands.nc")
 
-bstruct_plot = andreev_data.sel(phase=0).hvplot.scatter(width=300,
-                                                        y="band_structure",
-                                                        x="k",
-                                                        by="level",
-                                                        legend=False,
-                                                        size=1,
-                                                        c="spin",
-                                                        ylim=(-80, 50),
-                                                        dynamic=False
-                                                       )
-andreev_plot = andreev_data.sel(k=0).hvplot.line(width=300,
-                                                 y="andreev_energies",
-                                                 x="phase",
-                                                 by="level",
-                                                 legend=False,
-                                                 c="black",
-                                                 title="",
-                                                 dynamic=False,
-                                                )
+# Filter the dataset where charge > 0
+filtered_ds = ds_bands.where(ds_bands.charge > 0, drop=True)
 
-bstruct_plot + andreev_plot
+# Plot k vs energy for all bands (filtered), grouped by band, without legends
+plot1 = filtered_ds.hvplot.scatter(
+    x="k",
+    y="bandstructure",
+    c="spin",  # Color by spin
+    by="band",  # Separate bands
+    title="",
+    colorbar=True,
+    legend=False,  # Remove legends
+    ylim=(-1, 1),
+    aspect=1,
+    dynamic=False
+)
+
+# Plot k vs energy for all bands (filtered), grouped by band, without legends
+plot2 = ds_andreev.hvplot(
+    x="phi",
+    y="energy",
+    c="k",  # Color by spin
+    by="level",  # Separate bands
+    title="",
+    colorbar=True,
+    legend=False,  # Remove legends
+    aspect=1,
+    dynamic=False
+)
+
+plot1 + plot2
 ```
 
 To see how we can introduce a splitting of ABS, we begin from the short-junction limit where $E_T = \hbar v_F / L \gg \Delta$. The lowest-order correction to the ABS hamiltonian in $1/E_T$ is
