@@ -1,2 +1,6 @@
 jupyter-book
 betterbib
+xarray
+scipy
+hvplot
+pyparsing
